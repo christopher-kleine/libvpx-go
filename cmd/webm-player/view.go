@@ -107,7 +107,7 @@ func (v *View) nkStep() {
 	// Layout
 	bounds := nk.NkRect(0, 0, float32(width), float32(height))
 	if nk.NkBegin(v.ctx, windowName, bounds, nk.WindowNoScrollbar) > 0 {
-		nk.NkWindowSetBounds(v.ctx, bounds)
+		nk.NkWindowSetBounds(v.ctx, "WebM Player", bounds)
 		nk.NkWindowCollapse(v.ctx, windowName, nk.Maximized)
 		viewWidth, viewHeight := letterbox(float32(v.width), float32(v.height),
 			float32(width), float32(height)-panelHeight)
